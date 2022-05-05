@@ -235,7 +235,16 @@ The function plusMinus should return an array like this:
 -----------------------------------------------------------------------------*/
 // Your solution for 04- here:
 
-
+function plusMinus(arr) {
+  let x = [0,0,0]
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] > 0 ? x[0]++ : arr[i] < 0 ? x[1]++ : x[2]++
+  }
+  let a = (x[0]/arr.length).toFixed(6)
+  let b = (x[1]/arr.length).toFixed(6)
+  let c = (x[2]/arr.length).toFixed(6)
+  return [a,b,c]
+}
 
 
 /*-----------------------------------------------------------------------------
