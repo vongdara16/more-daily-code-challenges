@@ -34,10 +34,10 @@ Only one valid answer exists.
 function twoSum(nums, target){
   for (let i = 0; i < nums.length; i++){
     const diff = target - nums[i]
-    console.log('i', i)
-    console.log('diff', diff)
+    // console.log('i', i)
+    // console.log('diff', diff)
     const idxOfDiff = nums.indexOf(diff)
-    console.log('idxofDiff', idxOfDiff)
+    // console.log('idxofDiff', idxOfDiff)
     if(idxOfDiff !== -1 && idxOfDiff !== i){
       output = [i, idxOfDiff]
       return output
@@ -45,7 +45,7 @@ function twoSum(nums, target){
   }
 }
 
-console.log(twoSum([11,7,11,7], 18))
+// console.log(twoSum([11,7,11,7], 18))
 
 // function twoSum(nums, target) {
 //   for(let i=0; i<nums.length; i++){
@@ -130,8 +130,23 @@ Result:
 -----------------------------------------------------------------------------*/
 // Your solution for 02- here:
 
+function compareTriplets(a, b) {
+  let c = [0,0]
+  for (let i = 0; i < a.length; i++){
+    // console.log(i)
+    // console.log('a',a[i])
+    // console.log('b',b[i])
+    if (a[i] > b[i]) {
+      c[0]++
+    } else if (a[i] < b[i]) {
+      c[1]++
+    }
+  }
+  return c
 
+}
 
+console.log(compareTriplets([1,2,3], [3,2,1]))
 
 /*-----------------------------------------------------------------------------
 
