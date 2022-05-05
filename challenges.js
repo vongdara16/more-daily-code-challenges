@@ -146,7 +146,7 @@ function compareTriplets(a, b) {
 
 }
 
-console.log(compareTriplets([1,2,3], [3,2,1]))
+// console.log(compareTriplets([1,2,3], [3,2,1]))
 
 /*-----------------------------------------------------------------------------
 
@@ -199,8 +199,22 @@ Difference: |4 - 19| = 15
 -----------------------------------------------------------------------------*/
 // Your solution for 03- here:
 
+function diagonalDifference (arr) {
+  let x = 0
+  let y = 0
+  for (let i = 0; i < arr.length; i++) {
+    // console.log('first',arr[i][i])
+    x += arr[i][i]
+    // console.log('sec', arr[i][2-i])
+    y += arr[i][2-i]
+  }
+  // console.log('x',x)
+  // console.log('y',y)
+  // let sum = Math.abs(x-y)
+  return Math.abs(x-y)
+}
 
-
+console.log(diagonalDifference([[1,2,3],[4,5,6],[7,8,-2]]))
 
 /*-----------------------------------------------------------------------------
 Challenge: 04 - plusMinus
