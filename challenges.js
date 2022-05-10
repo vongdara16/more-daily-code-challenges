@@ -400,8 +400,20 @@ Candle heights are 3, 2, 1, and 3. The tallest candles are 3 units, and there ar
 -----------------------------------------------------------------------------*/
 // Your solution for 07- here:
 
+function birthdayCakeCandles(arr){
+  let count = 0
+  let max = Math.max(...arr)
 
+  for(let i = 0; i < arr.length; i++){
+    if (max === arr[i]) {
+      count++
+    }
+  }
+  // console.log(count)
+  return count
+}
 
+birthdayCakeCandles([1,3,3,3])
 
 
 
