@@ -296,8 +296,30 @@ The staircase is right-aligned, composed of # symbols and spaces, and has a heig
 -----------------------------------------------------------------------------*/
 // Your solution for 05- here:
 
+function staircase(n){
+  let arr = []
+  // let space = ' '
+  // let hash = '#'
+  // let str = ''
+  // for (let i=1; i <= n; i++){
+  //   str = space.repeat(n-i) + hash.repeat(i)
+  //   arr.push(str)
+    
+    // for(let j=1; j <= n; j++) { 
+    //   str = space.repeat(n-j) + hash.repeat(j)
+    //   arr.push(str)
+    // }
+    // arr.push(str)
+  // }
+  // return arr
 
+  for(let i=1; i <=n; i++) {
+    arr.push(' '.repeat(n-i) + '#'.repeat(i))
+  }
+  return arr
+}
 
+console.log(staircase(4))
 
 
 /*-----------------------------------------------------------------------------
