@@ -523,8 +523,22 @@ Student 4 received a grade below 38, so the grade will not be modified and the s
 -----------------------------------------------------------------------------*/
 // Your solution for 09- here:
 
+function gradingStudents(arr){
+  let outArr = []
+  arr.forEach(num => {
+    let mult = Math.ceil(num/5)*5
+    if (num < 38) {
+      outArr.push(num)
+    } else if (mult - num < 3) {
+      outArr.push(mult)
+    } else {
+      outArr.push(num)
+    }
+  })
+  return outArr
+}
 
-
+// console.log(gradingStudents([20,37,49,73]))
 
 
 /*-----------------------------------------------------------------------------
