@@ -660,3 +660,22 @@ She broke her best record four times and her worst record zero times (no score d
 -----------------------------------------------------------------------------*/
 // Your solution for 11- here:
 
+function breakingRecords(arr){
+  let record = [0,0]
+  let max = arr[0]
+  let min = arr[0]
+  arr.forEach(num => {
+    if (num > max) {
+      max = num 
+      record[0]++
+    }
+    if (num < min){
+      min = num 
+      record[1]++
+    }
+  })
+  return record
+}
+
+// console.log(breakingRecords([3,4,21,36,10,28,35,5,24,42]))
+console.log(breakingRecords([10,5,20,20,4,5,2,25,1]))
