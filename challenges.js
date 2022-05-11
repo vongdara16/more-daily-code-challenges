@@ -214,7 +214,7 @@ function diagonalDifference (arr) {
   return Math.abs(x-y)
 }
 
-console.log(diagonalDifference([[1,2,3],[4,5,6],[7,8,-2]]))
+// console.log(diagonalDifference([[1,2,3],[4,5,6],[7,8,-2]]))
 
 /*-----------------------------------------------------------------------------
 Challenge: 04 - plusMinus
@@ -589,7 +589,31 @@ The second kangaroo has a starting location that is ahead (further along the num
 -----------------------------------------------------------------------------*/
 // Your solution for 10- here:
 
+// function kangaroo(x1,v1,x2,v2){
+//   if ((x2 > x1 && v2 > v1) || (x1 > x2 && v1 > v2)) {
+//     return 'NO'
+//   } else if (v1 === v2 && x1 !== x2) {
+//     return 'NO'
+//   } else if (x1 === x2) {
+//     return 'YES'
+//   } else if ((v2 > (x1+v1) && v2 > v1) || (v1 > (x2+v2) && v1 > v2)) {
+//     return 'NO'
+//   }
+// }
 
+function kangaroo(x1, v1, x2, v2){
+  let a = x1
+  let b = x2
+  if (x2 > x1 && v2 > v1 || x1 > x2 && v1 > v2) return 'NO'
+  for (i = 1; i < 10000; i++){
+    a += v1
+    b += v2
+    if (a === b) return "YES"
+  }
+  return x1 === x2 ? 'YES' : 'NO'
+}
+
+console.log(kangaroo(0,3,4,2))
 
 
 
